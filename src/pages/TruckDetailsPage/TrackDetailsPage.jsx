@@ -1,15 +1,16 @@
-import Navigation from "../components/Navigation/Navigation";
-import FeatureBox from "../components/FeatureBox/Feature";
+import Navigation from "../../components/Navigation/Navigation";
+import FeatureBox from "../../components/FeatureBox/Feature";
 import toast, { Toaster } from "react-hot-toast";
-import TruckInfo from "../components/TruckInfo/TruckInfo";
-import TruckImage from "../components/TruckImage/TruckImage";
-import TruckDetailList from "../components/TruckDetailList/TruckDetailList";
-import BookForm from "../components/BookForm/BookForm";
+import TruckInfo from "../../components/TruckInfo/TruckInfo";
+import TruckImage from "../../components/TruckImage/TruckImage";
+import TruckDetailList from "../../components/TruckDetailList/TruckDetailList";
+import BookForm from "../../components/BookForm/BookForm";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axiosInstance from "../utils/axios";
+import axiosInstance from "../../utils/axios";
 import { HashLoader } from "react-spinners";
-import CommentCard from "../components/CommentCard/CommentCard";
+import CommentCard from "../../components/CommentCard/CommentCard";
+import styles from "./TrackDetailsPage.module.css";
 
 function TrackDetailsPage() {
   const { id } = useParams();
@@ -49,29 +50,48 @@ function TrackDetailsPage() {
     <>
       <Navigation />
       <Toaster />
-      <div>
-        <div>
+      <div className={styles.pageWrapper}>
+        <div className={styles.section}>
           <TruckInfo truck={truck} />
-          <ul>
+
+          <ul className={styles.imageList}>
             {truck.gallery.map((g) => (
               <TruckImage url={g.original} key={g.thumb} alt={truck.name} />
             ))}
+
             <TruckImage
               url={truck.gallery[0].original}
               key={truck.gallery[0].original}
               alt={truck.name}
             />
           </ul>
-          <p>{truck.description}</p>
+
+          <p className={styles.description}>{truck.description}</p>
         </div>
-        <div>
-          <h3 onClick={() => setStatus("details")}>Features</h3>
-          <h3 onClick={() => setStatus("comments")}>Reviews</h3>
+
+        <div className={styles.tabHeader}>
+          <h3
+            onClick={() => setStatus("details")}
+            className={`${styles.tab} ${
+              status === "details" ? styles.activeTab : ""
+            }`}
+          >
+            Features
+          </h3>
+          <h3
+            onClick={() => setStatus("comments")}
+            className={`${styles.tab} ${
+              status === "comments" ? styles.activeTab : ""
+            }`}
+          >
+            Reviews
+          </h3>
         </div>
-        <div>
+
+        <div className={styles.tabHeader}>
           {status === "details" && (
-            <div>
-              <ul>
+            <div className={styles.detailsCard}>
+              <ul className={styles.featureList}>
                 {keys.map((key) =>
                   truck[key] === true ? (
                     <FeatureBox
@@ -82,15 +102,18 @@ function TrackDetailsPage() {
                   ) : null
                 )}
               </ul>
+
               <div>
-                <h3>Vehicle details</h3>
+                <h3 className={styles.bookingTitle}>Vehicle details</h3>
+                <div className="border-b border-[#DADDE1] my-[24px]"></div>
                 <TruckDetailList truck={truck} />
               </div>
             </div>
           )}
+
           {status === "comments" && (
-            <div>
-              <ul>
+            <div className={styles.commentsCard}>
+              <ul className={styles.commentList}>
                 {truck.reviews.map((r) => (
                   <CommentCard key={`${r.comment}`} review={r} />
                 ))}
@@ -98,12 +121,16 @@ function TrackDetailsPage() {
             </div>
           )}
 
-          <div>
-            <div>
-              <h3>Book your campervan now</h3>
-              <p>Stay connected! We are always ready to help you.</p>
+          <div className={styles.bookingBox}>
+            <div className={styles.bookingInner}>
+              <div>
+                <h3 className={styles.bookingTitle}>Book your campervan now</h3>
+                <p className={styles.bookingText}>
+                  Stay connected! We are always ready to help you.
+                </p>
+              </div>
+              <BookForm />
             </div>
-            <BookForm />
           </div>
         </div>
       </div>

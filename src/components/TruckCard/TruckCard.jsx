@@ -4,6 +4,7 @@ import LinkButton from "../LinkButton/LinkButton";
 import Svg from "../Svg/Svg";
 import { toggleFavorite } from "../../redux/favouriteSlice";
 import styles from "./TruckCard.module.css";
+import svgStyles from "../Svg/Svg.module.css";
 
 function calculateAvgRating(reviews) {
   if (!reviews || reviews.length === 0) return 0;
@@ -39,21 +40,21 @@ function TruckCard({ truck }) {
             >
               <h2 className={styles.title}>€{truck.price.toFixed(2)}</h2>
               <Svg
-                cssClass="size-[24px]"
+                cssClass={svgStyles.iconMedium}
                 iconName={`${isFav ? "filled-hearth" : "empty-hearth"}`}
               />
             </div>
           </div>
           <div className={styles.ratingRow}>
             <div className={styles.subInfo}>
-              <Svg cssClass="size-[16px]" iconName="filled-star" />
+              <Svg cssClass={svgStyles.iconSmall} iconName="filled-star" />
               <p>
                 {calculateAvgRating(truck.reviews)} ({truck.reviews.length}{" "}
                 Reviews)
               </p>
             </div>
             <div className={styles.subInfo}>
-              <Svg cssClass="size-[16px]" iconName="map" />
+              <Svg cssClass={svgStyles.iconSmall} iconName="map" />
               <p>{truck.location}</p>
             </div>
           </div>

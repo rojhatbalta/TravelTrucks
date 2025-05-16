@@ -1,7 +1,7 @@
-function Svg({ className, iconName }) {
+function Svg({ cssClass, iconName }) {
   return (
-    <svg className={className}>
-      <use href={`/icons.svg#icon-${iconName}`} />
+    <svg className={cssClass}>
+      <use href={`../../assets/svg/icons.svg#icon-${iconName}`} />
     </svg>
   );
 }

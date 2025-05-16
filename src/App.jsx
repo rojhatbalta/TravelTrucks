@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import CatalogPage from "./pages/CatalogPage";
-import HomePage from "./pages/HomePage";
-import TrackDetailsPage from "./pages/TrackDetailsPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import CatalogPage from "./pages/CatalogPage/CatalogPage";
+import HomePage from "./pages/HomePage/HomePage";
+import TrackDetailsPage from "./pages/TruckDetailsPage/TrackDetailsPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   return (

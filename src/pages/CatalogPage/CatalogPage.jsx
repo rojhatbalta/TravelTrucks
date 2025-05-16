@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import CatalogMain from "../components/CatalogMain/CatalogMain";
-import CatalogSideBar from "../components/CatalogSideBar/CatalogSideBar";
-import Navigation from "../components/Navigation/Navigation";
+import CatalogMain from "../../components/CatalogMain/CatalogMain";
+import CatalogSideBar from "../../components/CatalogSideBar/CatalogSideBar";
+import Navigation from "../../components/Navigation/Navigation";
 import { Toaster } from "react-hot-toast";
-import useFetchAndDispatch from "../hooks/useFetchAndDispatch";
+import useFetchAndDispatch from "../../hooks/useFetchAndDispatch";
+import styles from "./CatalogPage.module.css";
 
 function CatalogPage() {
   const fetchAndDispatch = useFetchAndDispatch();
@@ -19,7 +20,7 @@ function CatalogPage() {
     <>
       <Toaster />
       <Navigation />
-      <div>
+      <div className={styles.container}>
         <CatalogSideBar />
         <CatalogMain />
       </div>

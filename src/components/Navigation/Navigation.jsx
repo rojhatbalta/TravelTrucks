@@ -6,7 +6,7 @@ function Navigation() {
     <header>
       <nav className={styles.navbar}>
         <NavLink to="/" className="logo">
-          <img src="/logo.png" alt="TravelTrucks logo" />
+          <img src="../../assets/img/logo.png" alt="TravelTrucks logo" />
         </NavLink>
         <ul className={styles.navList}>
           <li>
