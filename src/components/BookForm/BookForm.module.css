@@ -1,0 +1,27 @@
+.input {
+  padding: 18px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+}
+
+.textarea {
+  height: 112px;
+}
+
+.error {
+  color: #ef4444;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.button {
+  background-color: #e44848;
+  color: #ffffff;
+  align-self: center;
+  border-radius: 9999px;
+  padding: 16px 40px;
+}

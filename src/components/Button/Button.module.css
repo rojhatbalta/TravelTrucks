@@ -1,0 +1,16 @@
+.button {
+  border-radius: 9999px;
+  padding: 16px 40px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+.primaryRed {
+  background-color: #e44848;
+  color: #ffffff;
+}
+.secondaryGray {
+  background-color: #f2f4f7;
+  color: #141414;
+}

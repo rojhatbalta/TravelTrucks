@@ -1,0 +1,17 @@
+.box {
+  padding: 16px 40px;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  width: 112px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.selected {
+  border-color: #e44848;
+}

@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.title {
+  color: #101828;
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+}
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: underline;
+}
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.price {
+  font-weight: 600;
+  font-size: 1.5rem; /* 24px */
+}
