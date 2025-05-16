@@ -1,8 +1,8 @@
-import Svg from "./Svg";
+import Svg from "../Svg/Svg";
 import { useDispatch, useSelector } from "react-redux";
-import { updateFilters } from "../redux/filterSlice";
+import { updateFilters } from "../../redux/filterSlice";
 import styles from "./FilterBox.module.css";
-import svgStyles from "./Svg.module.css";
+import svgStyles from "../Svg/Svg.module.css";
 
 function FilterBox({ iconName, text, filterName, filterValue }) {
   const dispatch = useDispatch();

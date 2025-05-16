@@ -1,6 +1,6 @@
-import Svg from "../components/Svg";
+import Svg from "../Svg/Svg";
 import styles from "./TruckInfo.module.css";
-import svgStyles from "../components/Svg.module.css";
+import svgStyles from "../Svg/Svg.module.css";
 
 function TruckInfo({ truck }) {
   return (

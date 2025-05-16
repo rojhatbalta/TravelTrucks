@@ -1,5 +1,5 @@
-import Hero from "../components/Hero";
-import Navigation from "../components/Navigation";
+import Hero from "../components/Hero/Hero";
+import Navigation from "../components/Navigation/Navigation";
 
 function HomePage() {
   return (

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import TruckCard from "../components/TruckCard";
+import TruckCard from "../TruckCard/TruckCard";
 import { HashLoader } from "react-spinners";
 import styles from "./CatalogMain.module.css";
 

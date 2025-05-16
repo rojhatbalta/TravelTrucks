@@ -1,5 +1,5 @@
-import { formInitials } from "../utils/formInitials";
-import { formSchema } from "../utils/formSchema";
+import { formInitials } from "../../utils/formInitials";
+import { formSchema } from "../../utils/formSchema";
 import toast from "react-hot-toast";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import styles from "./BookForm.module.css";

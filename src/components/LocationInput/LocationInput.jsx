@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Svg from "./Svg";
+import Svg from "../Svg/Svg";
 import { useDispatch } from "react-redux";
-import { updateFilters } from "../redux/filterSlice";
+import { updateFilters } from "../../redux/filterSlice";
 import styles from "./LocationInput.module.css";
-import svgStyles from "./Svg.module.css";
+import svgStyles from "../Svg/Svg.module.css";
 
 function LocationInput() {
   const dispatch = useDispatch();

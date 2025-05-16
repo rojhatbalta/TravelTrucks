@@ -1,8 +1,8 @@
-import LocationInput from "../components/LocationInput";
-import FilterBox from "../components/FilterBox";
-import Button from "../components/Button";
+import LocationInput from "../LocationInput/LocationInput";
+import FilterBox from "../FilterBox/FilterBox";
+import Button from "../Button/Button";
 import { useSelector } from "react-redux";
-import useFetchAndDispatch from "../hooks/useFetchAndDispatch";
+import useFetchAndDispatch from "../../hooks/useFetchAndDispatch";
 import styles from "./CatalogSideBar.module.css";
 
 function CatalogSideBar() {

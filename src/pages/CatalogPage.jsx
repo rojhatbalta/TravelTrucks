@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import CatalogMain from "../components/CatalogMain";
-import CatalogSideBar from "../components/CatalogSideBar";
-import Navigation from "../components/Navigation";
+import CatalogMain from "../components/CatalogMain/CatalogMain";
+import CatalogSideBar from "../components/CatalogSideBar/CatalogSideBar";
+import Navigation from "../components/Navigation/Navigation";
 import { Toaster } from "react-hot-toast";
 import useFetchAndDispatch from "../hooks/useFetchAndDispatch";
 

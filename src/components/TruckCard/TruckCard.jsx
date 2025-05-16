@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import FeatureBox from "./FeatureBox";
-import LinkButton from "./LinkButton";
-import Svg from "./Svg";
-import { toggleFavorite } from "../redux/favouriteSlice";
+import FeatureBox from "../FeatureBox/Feature";
+import LinkButton from "../LinkButton/LinkButton";
+import Svg from "../Svg/Svg";
+import { toggleFavorite } from "../../redux/favouriteSlice";
 import styles from "./TruckCard.module.css";
 
 function calculateAvgRating(reviews) {

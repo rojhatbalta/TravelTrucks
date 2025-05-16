@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import LinkButton from "./LinkButton";
+import LinkButton from "../LinkButton/LinkButton";
 import styles from "./Hero.module.css";
 
 function Hero() {

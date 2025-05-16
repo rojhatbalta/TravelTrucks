@@ -1,6 +1,6 @@
-import Svg from "./Svg";
-import styles from "./FeatureBox.module.css";
-import svgStyles from "./Svg.module.css";
+import Svg from "../Svg/Svg";
+import styles from "./Feature.module.css";
+import svgStyles from "../Svg/Svg.module.css";
 
 function FeatureBox({ iconName, text }) {
   return (

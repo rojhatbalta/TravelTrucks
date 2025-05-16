@@ -6,7 +6,7 @@
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/asssets/hero-background.png");
+  background-image: url("../../assets/hero-background.png");
 }
 .content {
   display: flex;

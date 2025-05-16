@@ -1,15 +1,15 @@
-import Navigation from "../components/Navigation";
-import FeatureBox from "../components/FeatureBox";
+import Navigation from "../components/Navigation/Navigation";
+import FeatureBox from "../components/FeatureBox/Feature";
 import toast, { Toaster } from "react-hot-toast";
-import TruckInfo from "../components/TruckInfo";
-import TruckImage from "../components/TruckImage";
-import TruckDetailList from "../components/TruckDetailList";
-import BookForm from "../components/BookForm";
+import TruckInfo from "../components/TruckInfo/TruckInfo";
+import TruckImage from "../components/TruckImage/TruckImage";
+import TruckDetailList from "../components/TruckDetailList/TruckDetailList";
+import BookForm from "../components/BookForm/BookForm";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axiosInstance from "../utils/axios";
 import { HashLoader } from "react-spinners";
-import CommentCard from "../components/CommentCard";
+import CommentCard from "../components/CommentCard/CommentCard";
 
 function TrackDetailsPage() {
   const { id } = useParams();

@@ -1,6 +1,6 @@
-import Svg from "./Svg";
+import Svg from "../Svg/Svg";
 import styles from "./CommentCard.module.css";
-import svgStyles from "./Svg.module.css";
+import svgStyles from "../Svg/Svg.module.css";
 
 function CommentCard({ review }) {
   const maxReview = [1, 2, 3, 4, 5];
